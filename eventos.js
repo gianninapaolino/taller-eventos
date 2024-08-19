@@ -1,7 +1,14 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('container');
-    
-    container.addEventListener('click', function() {
+    const button = document.getElementById('saludarButton');
+
+
+    container.addEventListener('click', () => {
         alert('Hola! Soy el div');
+    });
+
+    button.addEventListener('click', (event) => {
+        event.stopPropagation();
+        alert('Hola!');
     });
 });
